@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="Public/images/icon/smalllogo.png" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>BBW-专注校园二手</title>
+    <link type="text/css" href="Public/plugins/pintuer/pintuer.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="Public/public/init.css">
+    <link rel="stylesheet" href="Public/Fonts/goodsdis/iconfont.css" type="text/css" />
+    <link rel="stylesheet" href="Public/public/pager.css" type="text/css" />
+    <meta name="keywords" content="校园二手,校园二手市场,大学二手,大学二手市场,大学生二手,大学二手网站,校园二手网站,校园二手app,桂林二手,桂林校园二手">
+    <meta name="description" content="柚子校园网是由柚子校园团队开发的一个高校校园综合性的二手交易平台，校园二手网、大学生二手市场、大学生二手网，覆盖多所大学的大学生。涵盖二手手机、二手自行车、二手电动车、二手教材、二手书、二手电脑、二手数码产品等校园二手信息，满足大学生校园内的二手交易、二手求购的需求。买卖二手，尽在柚子校园">
+    <link type="text/css" rel="stylesheet" href="Public/Fonts/mmiconfont/iconfont.css">
+    <script src="Public/public/jquery-1.8.3.min.js"></script>
+    <script src="Public/plugins/layer/layer.js"></script>
+    <script type="text/javascript" src="Public/public/common.js"></script>
+
+</head>
+<body>
+
+<!--右侧图标-->
+<style>
+    li{ list-style:none}
+    #rightButton{ position:fixed; _position:absolute; top:360px; right:0; z-index:999999; display:block;}
+    #right_ul{ position:relative;}
+    #right_qq{  background:url(Public/plugins/helpfixed/images/7_03.png) no-repeat; width:68px; height:74px; }
+    #right_tel{ background:url(Public/plugins/helpfixed/images/7_05.png) no-repeat; width:68px; height:77px; }
+    #right_tip{  background:url(Public/plugins/helpfixed/images/flag_right.png) no-repeat; width:252px; height:91px; position:absolute; right:70px; top:-10px; display:none; z-index:999999; }
+    .flagShow_p1{ float:left; margin-left:15px; _margin-left:5px; font-size:18px; line-height:91px;}
+    .flagShow_p2{ float:left; margin-left:10px; _margin-left:5px; font-size:18px;  color:#FA7C00;}
+    .flagShow_p2 a{ display:block; margin: 20px 0 5px 12px; line-height:0;}
+    .flagShow_p2 span{ margin: 0 0 0 14px; }
+    .flag_qq{ display:none;}
+    #backToTop{ position:fixed; _position:absolute; bottom:20px; right:0; z-index:999999; display:none; }
+    a.backToTop_a{  background:url(Public/plugins/helpfixed/images/7_08.png) no-repeat; width:68px; height:79px; display:block; }
+    a.backToTop_a:active{  background:url(Public/plugins/helpfixed/images/7_11.png) no-repeat; }
+    .line91{ line-height:91px; }
+</style>
+<div id="rightButton">
+    <ul id="right_ul">
+        <li id="right_qq" class="right_ico" show="qq" hide="tel"></li>
+        <li id="right_tel" class="right_ico" show="tel" hide="qq"></li>
+        <li id="right_tip" class="png">
+            <p class="flagShow_p1 flag_tel">电话联系</p>
+            <p class="flagShow_p2 flag_tel line91">18093195086</p>
+            <p class="flagShow_p1 flag_qq">QQ联系</p>
+            <p class="flagShow_p2 flag_qq">
+                <a href="tencent://message/?uin=1913045515&Site=QQ交谈&Menu=yes" target="_blank">
+                    <img border="0" src="Public/plugins/helpfixed/images/qiyeQQ.png"></a> <span>QQ:1913045515</span> </p>
+        </li>
+    </ul>
+</div>
+<div id="backToTop">
+    <a href="javascript:;" onfocus="this.blur();" class="backToTop_a png"></a>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        $("#rightButton").css("right", "0px");
+
+        var button_toggle = true;
+        $(".right_ico").on("mouseover", function(){
+            var tip_top;
+            var show= $(this).attr('show');
+            var hide= $(this).attr('hide');
+            tip_top = show == 'tel' ?  65 :  -10;
+            button_toggle = false;
+            $("#right_tip").css("top" , tip_top).show().find(".flag_"+show).show();
+            $(".flag_"+hide).hide();
+
+        }).on("mouseout", function(){
+            button_toggle = true;
+            hideRightTip();
+        });
+
+
+        $("#right_tip").on("mouseover", function(){
+            button_toggle = false;
+            $(this).show();
+        }).on("mouseout", function(){
+            button_toggle = true;
+            hideRightTip();
+        });
+
+        function hideRightTip(){
+            setTimeout(function(){
+                if( button_toggle ) $("#right_tip").hide();
+            }, 500);
+        }
+
+        $("#backToTop").click(function(){
+            var _this = $(this);
+            $('body,html').animate({scrollTop:0},1000,'swing',function(){_this.hide()});
+        });
+
+        $(window).scroll(function(){
+            var htmlTop = $(document).scrollTop();
+            if( htmlTop > 0){
+                $("#backToTop").show();
+            }else{
+                $("#backToTop").hide();
+            }
+        });
+    });
+</script>
+<!--[if lte IE 6]>
+<script src="js/phone/PNG.js" type="text/javascript"></script>
+<script>
+    if( typeof(PNG) == 'object') PNG.fix('.png');
+</script>
+<![endif]-->
+
+<link rel="stylesheet" href="Public/Home/css/logreg/login.css" type="text/css" />
+<div class="main clearfix">
+    <div class="right">
+        <div class="weixinpic">
+            <a class="nav_link" href="/index/index">
+                <img src="Public/images/weixin.png">
+            </a>
+        </div>
+        <div class="sao">
+            <p class="big">扫一扫，关注我们</p>
+            <p class="small">及时收取BBW的最新资讯与活动哦</p>
+        </div>
+        <div class="erweima">
+            <img src="Uploads/web/2016-03-03/wolzq.png">
+            <p class="text">扫一扫，或百度:BBW</p>
+        </div>
+        <div class="copyright">
+            <p class="">版权所有 © All Rights Reserved</p>
+        </div>
+    </div>
+    <div class="left ">
+        <div class="top">登陆BBW校园</div>
+            <div class="username item form-group">
+                <div class="field">
+                    <label for="name">邮箱</label>
+                    <input name="username" value="" class="name" type="text" id="username" placeholder="请输入邮箱">
+                </div>
+            </div>
+            <div class="psssword item form-group">
+                <div class="field">
+                    <label for="pass">密码</label>
+                    <input class="name" type="password" id="password" placeholder="请输入密码" name="password">
+                </div>
+            </div>
+            <div class="verify item form-group">
+                <div class="field">
+                    <label for="code">验证码</label>
+                    <input class="code" type="text" name="validcode" id="validcode" placehoder="请输入验证码">
+                	<img id="verifycode" alt="点击更换" src="/TP/codePic" style="cursor:pointer;"/>            
+                </div>
+            </div>
+            <div class="reg">
+                <button class="reg_btn">马 上 登 陆</button>
+            </div>
+            <div class="other login">
+                <div class="longlogin">
+                    <input class="longlogin" name="longlogin" value="1" type="checkbox" checked="checked">
+                    <label>记住我的登录状态</label>&nbsp&nbsp
+                    <label id="flagShow" style="color:#CC0000"></label>
+                </div>
+                <div>
+                    <span class="has">没有账号？</span><a href="register.html">马上注册</a>
+                    <span class="forget">忘记密码？</span><a href="#" onclick="javascript:layer.alert('尚未开放，敬请期待');return false;">马上找回</a>
+                </div>
+            </div>
+            <div class="item other auth">
+                <div class="widget-login">
+                    <a href="#" class="" onclick="javascript:layer.alert('尚未开放，敬请期待');return false;"><span class="icon-sn-weibo"></span> </a>
+                    <a href="#" class="" onclick="javascript:layer.alert('尚未开放，敬请期待');return false;"><span class="icon-sn-qq"></span> </a>
+                    <a href="#" class="" onclick="javascript:layer.alert('尚未开放，敬请期待');return false;"><span class="icon-sn-weixin"></span></a>
+                </div>
+            </div>
+    </div>
+</div>
+<div style="clear: both"></div>
+<script src="Public/Home/js/logreg/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+		<!-- tools类 -->
+		<bean class="com.tp.tools.lucene.LuceneTools" id="LuceneTools"></bean>
+		<!-- dao类 -->
+		<bean class="com.tp.dao.imp.CommodityDaoImp" id="CommodityDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean class="com.tp.dao.imp.UsersDaoImp" id="UsersDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean class="com.tp.dao.imp.CommoditypathDaoImp" id="CommoditypathDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean class="com.tp.dao.imp.ClassificationDaoImp" id="ClassificationDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean class="com.tp.dao.imp.ReportDaoImp" id="ReportDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean class="com.tp.dao.imp.CampusDaoImp" id="CampusDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean class="com.tp.dao.imp.OrderDaoImp" id="OrderDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean class="com.tp.dao.imp.PlatformDaoImp" id="PlatformDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean class="com.tp.dao.imp.StatisticsDaoImp" id="StatisticsDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean class="com.tp.dao.imp.JurisdictionDaoImp" id="JurisdictionDaoImp">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		
+		
+		<!-- biz类 -->
+		<bean class="com.tp.biz.imp.LuceneBizImp" id="LuceneBizImp">
+			<property name="commodityDao" ref="CommodityDaoImp"></property>
+			<property name="saveLucene" ref="LuceneTools"></property>
+		</bean>
+		
+		<bean class="com.tp.biz.imp.UsersBizImp" id="UsersBizImp">
+			<property name="usersDao" ref="UsersDaoImp"></property>
+			<property name="campusDao" ref="CampusDaoImp"></property>
+			<property name="jurisdictionDao" ref="JurisdictionDaoImp"></property>
+		</bean>
+		
+		<bean class="com.tp.biz.imp.CommodityBizImp" id="CommodityBizImp">
+			<property name="commodityDao" ref="CommodityDaoImp"></property>
+			<property name="commoditypathDao" ref="CommoditypathDaoImp"></property>
+			<property name="campusDao" ref="CampusDaoImp"></property>
+			<property name="classificationDao" ref="ClassificationDaoImp"></property>
+		</bean>
+		<bean class="com.tp.biz.imp.ClassificationBizImp" id="ClassificationBizImp">
+			<property name="classificationDao" ref="ClassificationDaoImp"></property>
+		</bean>
+		<bean class="com.tp.biz.imp.ReportBizImp" id="ReportBizImp">
+			<property name="reportDao" ref="ReportDaoImp"></property>
+		</bean>
+		<bean class="com.tp.biz.imp.CampusBizImp" id="CampusBizImp">
+			<property name="campusDao" ref="CampusDaoImp"></property>
+		</bean>
+		<bean class="com.tp.biz.imp.OrderBizImp" id="OrderBizImp">
+			<property name="orderDao" ref="OrderDaoImp"></property>
+		</bean>
+		<bean class="com.tp.biz.imp.PlatformBizImp" id="PlatformBizImp">
+			<property name="platformDao" ref="PlatformDaoImp"></property>
+		</bean>
+		<bean class="com.tp.biz.imp.StatisticsBizImp" id="StatisticsBizImp">
+			<property name="statisticsDao" ref="StatisticsDaoImp"></property>
+		</bean>
+		
+		<bean class="com.tp.biz.imp.MailBizImp" id="MailBizImp" scope="prototype"></bean>
+		<bean class="com.tp.biz.imp.JPushBizImp" id="JPushBizImp" scope="prototype"></bean>
+		
+		
+		
+		<!-- action类 -->
+		<bean class="com.tp.action.CommodityUploadAction" id="CommodityUploadAction" scope="singleton"></bean>
+		<bean class="com.tp.action.ObjectAction" id="ObjectAction" scope="prototype"></bean>
+		<bean class="com.tp.action.LuceneAction" id="LuceneAction" scope="prototype">
+			<property name="luceneBiz" ref="LuceneBizImp"></property>
+		</bean>
+		<bean class="com.tp.action.UsersAction" id="UsersAction" scope="prototype">
+			<property name="usersBiz" ref="UsersBizImp"></property>
+		</bean>
+		<bean class="com.tp.tools.CodeUtil" id="CodeUtil" scope="prototype"></bean>
+		
+		<bean class="com.tp.action.AuthInterceptor" id="AuthInterceptor"></bean>
+		<bean class="com.tp.action.SessionCheckFilter" id="SessionCheckFilter"></bean>
+		
+		<bean class="com.tp.action.CommodityAction" id="CommodityAction" scope="prototype">
+			<property name="commodityBiz" ref="CommodityBizImp"></property>
+			<property name="luceneBiz" ref="LuceneBizImp"></property>
+		</bean>
+		
+		<bean class="com.tp.action.ClassificationAction" id="ClassificationAction" scope="prototype">
+			<property name="classificationBiz" ref="ClassificationBizImp"></property>
+		</bean>
+		<bean class="com.tp.action.ReportAction" id="ReportAction" scope="prototype">
+			<property name="reportBiz" ref="ReportBizImp"></property>
+		</bean>
+		<bean class="com.tp.action.CampusAction" id="CampusAction" scope="prototype">
+			<property name="campusBiz" ref="CampusBizImp"></property>
+		</bean>
+		<bean class="com.tp.action.OrderAction" id="OrderAction" scope="prototype">
+			<property name="orderBiz" ref="OrderBizImp"></property>
+		</bean>
+		<bean class="com.tp.action.PlatformAction" id="PlatformAction" scope="prototype">
+			<property name="platformBiz" ref="PlatformBizImp"></property>
+		</bean>
+		<bean class="com.tp.action.StatisticsAction" id="StatisticsAction" parent="ObjectAction" scope="prototype">
+			<property name="statisticsBiz" ref="StatisticsBizImp"></property>
+		</bean>
+		
+		<bean class="com.tp.action.EmailAction" id="EmailAction" parent="ObjectAction" scope="prototype">
+			<property name="usersBiz" ref="UsersBizImp"></property>
+			<property name="mailBiz" ref="MailBizImp"></property>
+		</bean>
+		
+		<bean class="com.tp.action.JPushAction" id="JPushAction" parent="ObjectAction" scope="prototype">
+			<property name="jPushBiz" ref="JPushBizImp"></property>
+		</bean>
+</beans>

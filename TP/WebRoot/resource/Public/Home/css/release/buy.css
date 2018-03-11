@@ -1,0 +1,81 @@
+
+#Filedata{
+    display:none;
+}
+
+.wrap .info{
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+    margin: 90px auto 20px;
+    padding: 40px;
+    width: 960px;
+}
+
+.wrap .topicon{
+    margin: auto;
+    width: 102px;
+}
+
+.wrap .topicon .icon{
+    height: 102px;
+    margin: auto;
+    width: 102px;
+    background: url("../../images/icon/topicon.gif") no-repeat;
+}
+
+.wrap .topicon .title{
+    text-align: center;
+    font-size: 25px;
+    color:rgb(2,185,239);
+}
+
+.wrap .info .list{
+    width: 75%;
+    float: left;
+    margin: 20px 15px  20px 12%;
+}
+
+.wrap .info .list .field{
+    float: right;
+}
+
+.wrap .info .list input{
+    height: 40px;
+    float: right;
+}
+
+.wrap .info .list .form-group{
+    margin-bottom: 10px;
+}
+
+.wrap .info .list .form-group label{
+    color: rgb(100,100,100);
+}
+
+.wrap .info .list .form-group select option{
+    color: rgb(100,100,100);
+}
+
+.wrap .info .list form{
+    margin: 30px 50px 10px 20px;
+
+}
+
+.wrap .info .fabu{
+    margin-top: 20px;
+    text-align: center;
+    width: 50%;
+    height: 40px;
+    color: #fff;
+    font-size: 23px;
+    line-height: 40px;
+    margin-left: 20%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(2,185,239);
+}
+

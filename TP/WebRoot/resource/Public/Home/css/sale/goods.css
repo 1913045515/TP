@@ -1,0 +1,472 @@
+body{
+    position: relative;
+    font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, Arial, sans-serif;
+/*     font-family: "Microsoft YaHei", "simsun", "Helvetica Neue", Arial, Helvetica, sans-serif!important;
+ */}
+
+html, body, div, header, footer, form, p, input, button, h1, h2, h3, h4, h5, h6, ul, li, img, textarea {
+    border: 0 none;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+}
+
+.wrap .main{
+    width: 960px;
+    margin:0 auto;
+    margin-top: 100px;
+}
+
+.wrap .main .topbox{
+    background-color: #fff;
+    width: 940px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.wrap .main .topbox .topschool{
+    position: relative;
+}
+
+.wrap .main .topbox .allschool span{
+    padding: 6px 15px;
+    transition: color 1s;
+    color: #555;
+}
+
+.wrap .main .topbox .allschool span:hover{
+    color: #1BC06C;
+}
+
+.wrap .main .topbox .allschool .school{
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+.wrap .main .topbox .topschool .schoolicon{
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.wrap .main .topbox .topschool .text{
+    font-size: 18px;
+    color: rgb(58,58,58);
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.wrap .main .topbox .apply{
+    color: rgb(58,58,58);
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.wrap .main .topbox .apply a{
+    color: rgb(0,172,144);
+}
+
+.wrap .main .searchbox{
+    width: 100%;
+    display: inline-block;
+    height: 60px;
+    margin: 20px auto 10px;
+    position: relative;
+}
+
+.wrap .main .searchbox form{
+    display: inline-block;
+    position: relative;
+}
+
+.wrap .main .searchbox img{
+    position: absolute;
+    left: 13px;
+    top: 13px;
+}
+
+.wrap .main .searchbox .search{
+    width:450px;
+    height: 50px;
+    font-size: 18px;
+    padding: 3px 0 3px 45px;
+    border-radius: 25px 0 0 25px;
+    border: 1px solid rgb(2,185,239);
+    float: left;
+}
+
+.wrap .main .searchbox .submit{
+    border-radius: 0 25px 25px 0;
+    height: 50px;
+    width: 80px;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    background-color: rgb(2, 185, 239);
+}
+
+.wrap .main .other::before {
+    content: " ";
+    display: block;
+    height: 2px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.wrap .main .other{
+    display: inline-block;
+    text-align: center;
+    height: 35px;
+    margin: 5px auto 10px;
+    margin-left: 330px;
+    border-top: 1px solid rgba(58,58,58,0.5);
+}
+
+.wrap .main .other .box{
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+
+.wrap .main .other a{
+    color: rgb(58,58,58);
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    font-size: 15px;
+    margin-left: 25px;
+    text-align: left;
+}
+
+.wrap .main .other a.active{
+    color: rgb(0,170,136);
+}
+
+.wrap .main .other a:first-child{
+    margin-left: 5px;
+}
+
+.items {
+    margin: 0 10px;
+    display: inline-block!important;
+}
+
+.item-list {
+    width: 100%;
+    padding-top: -30px;
+    text-align: center;
+}
+
+.item-list .goodsbox {
+    font-size: 0;
+    list-style: none;
+    text-align: center;
+    text-align-last: left;
+    padding-left: 0;
+}
+
+.pricehot .price {
+    color: red;
+    float: left;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.pricehot .price{
+    margin-top: 5px;
+}
+
+.pricehot .hot {
+    color: #888;
+    display: inline-block;
+    float: right;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.class-item .title {
+    color: #1b816c;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    line-height: 22px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.class-item .some .school {
+    color: #858d8e;
+    display: inline-block;
+    float: left;
+    text-align: left;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+.class-item .some .renzheng {
+    color: #858d8e;
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+.col-md-3 {
+    width: 220px;
+    float: left;
+}
+
+.class-item {
+    margin: 0 auto 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.recommend-class-list .class-item .class-bg-layer {
+    transition: all 0.3s ease 0s;
+}
+
+.class-bg-layer {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+    height: 100%;
+    left: 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: -1;
+}
+
+.recommend-class-list .class-item .class-item-bg {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.recommend-class-list .class-item .class-item-bg {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.recommend-class-list .class-item:hover .class-item-bg {
+    transform: translateY(-6px);
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -o-transform: translateY(-6px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08), 0 3px 3px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.08), 0 3px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.08), 0 3px 3px rgba(0, 0, 0, 0.12);
+    -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.08), 0 3px 3px rgba(0, 0, 0, 0.12);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease
+}
+
+.recommend-class-list .class-item .class-img {
+    display: block;
+}
+a {
+    color: #37b97d;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+
+.recommend-class-list .class-item .img-responsive {
+    width: 200px;
+}
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    height: 200px;
+    max-width: 100%;
+    width: 200px;
+}
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0 none;
+}
+
+.recommend-class-list .class-item h3 {
+    display: block;
+    font-size: 14px;
+    margin: 15px 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.link-dark {
+    color: #313131;
+    transition: all 0.3s ease 0s;
+}
+
+.recommend-class-list .class-item:hover .class-bg-layer {
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all .4s .05s ease;
+    -moz-transition: all .4s .05s ease;
+    -o-transition: all .4s .05s ease;
+    transition: all .4s .05s ease
+}
+
+/*.item-list .goodsbox .items {
+    display: inline-block;
+    position: relative;
+    width: 210px;
+    font-size: 12px;
+    box-sizing: border-box;
+    text-align: left;
+    border: 1px solid #ddd;
+    transition: border 1s ease;
+    margin: 0 10px 30px;
+    background-color: #fff;
+}
+
+.wrap .main .goodsbox .items:hover{
+    border: 1px solid rgb(2,185,239);
+}
+
+.wrap .main .goodsbox .items .detail{
+    padding: 8px;
+}
+
+.wrap .main .goodsbox .items .picture{
+    width: 100%;
+    height: 200px;
+}
+
+.wrap .main .goodsbox .items .picture img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.wrap .main .goodsbox .items .pricehot .price{
+    color: red;
+    font-size: 22px;
+    float: left;
+    font-weight: bold;
+}
+
+.wrap .main .goodsbox .items .pricehot .hot{
+    float: right;
+    font-size: 13px;
+    color: #888;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+
+.wrap .main .goodsbox .items .title {
+    font-weight: 400;
+    height: 36px;
+    font-size: 15px;
+    color: #1B816C  ;
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.wrap .main .goodsbox .items .some .school{
+    width: 65%;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    overflow: hidden;
+    float: left;
+    font-size: 1em;
+    color: #858D8E;
+}
+
+.wrap .main .goodsbox .items .some .renzheng{
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    overflow: hidden;
+    float: right;
+    font-size: 1em;
+    color: #858D8E;
+}*/
+
+/*·µ»Ø¶¥²¿*/
+.toTop{
+    display: inline-block;
+    position: fixed;
+    bottom: 60px;
+    right: 140px;
+    z-index: 99;
+}
+
+/*
+/!*Ò³½ÅµÄ·ÖÒ³²¿·ÖµÄÑùÊ½¿ªÊ¼*!/
+
+
+.item-list .pager {
+    color: rgb(58,58,58);
+    padding: 16px;
+    margin: 0 auto 20px;
+}
+
+.item-list .pager a,
+.item-list .pager .current{
+    line-height: 2.8em;
+    text-align: center;
+    white-space: nowrap;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 1.085em;
+    border-left: 2px solid rgba(58,58,58,0.2);
+    color: rgb(58,58,58);
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
+}
+
+.item-list .pager .current{
+    background-color: rgb(58,58,58);
+    color: #fff;
+}
+
+.item-list .pager .rows{
+    color: rgb(58,58,58);
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/!*Ò³½ÅµÄ·ÖÒ³²¿·ÖµÄÑùÊ½½áÊø*!/*/

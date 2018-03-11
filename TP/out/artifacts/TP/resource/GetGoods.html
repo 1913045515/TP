@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="Public/images/icon/smalllogo.png" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>发布求购信息-柚子校园</title>
+    <link type="text/css" href="Public/plugins/pintuer/pintuer.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="Public/public/init.css">
+    <link rel="stylesheet" href="Public/Fonts/goodsdis/iconfont.css" type="text/css" />
+    <link rel="stylesheet" href="Public/public/pager.css" type="text/css" />
+    <meta name="keywords" content="校园二手,校园二手市场,大学二手,大学二手市场,大学生二手,大学二手网站,校园二手网站,校园二手app,桂林二手,桂林校园二手">
+    <meta name="description" content="柚子校园网是由柚子校园团队开发的一个高校校园综合性的二手交易平台，校园二手网、大学生二手市场、大学生二手网，覆盖多所大学的大学生。涵盖二手手机、二手自行车、二手电动车、二手教材、二手书、二手电脑、二手数码产品等校园二手信息，满足大学生校园内的二手交易、二手求购的需求。买卖二手，尽在柚子校园">
+    <link type="text/css" rel="stylesheet" href="Public/Fonts/mmiconfont/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="Public/plugins/webuploader/style.css" />
+    <link rel="stylesheet" type="text/css" href="Public/plugins/webuploader/webuploader.css" />
+    <script src="Public/public/jquery-1.8.3.min.js"></script>
+    <script src="Public/plugins/pintuer/pintuer.js"></script>
+    <script src="Public/plugins/layer/layer.js"></script>
+    <script type="text/javascript" src="Public/public/common.js"></script>
+    <script type="text/javascript" src="Public/plugins/Carousel-Ad/js/superslide.2.1.js"></script>
+    <script type="text/javascript" src="Public/plugins/webuploader/webuploader.js"></script>
+    <script src="Public/public/thumbupload.js"></script>
+    <script src="Public/public/uploadfile.js"></script>
+    <script type="text/javascript" src="Public/public/jquery.lazyload.js"></script>
+    <script type="text/javascript">
+        ThinkPHP = window.Think = {
+            "ROOT"   : "",
+            "APP"    : "",
+            "PUBLIC" : "Public",
+            "DEEP"   : "/",
+            "VAR"    : ["m", "c", "a"],
+            "MODEL"  : ["2", "1", ""],
+        }
+        var publicUrl = "Public";
+        var curCityId = "450300";
+        var curCityName = "桂林市";
+
+    </script>
+    <script>
+        /*百度统计代码*/
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?631792055f974af19205e0193b81fcb4";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <script src="Public/public/think.js"></script>
+</head>
+<body>
+
+<!--右侧图标-->
+<style>
+    li{ list-style:none}
+    #rightButton{ position:fixed; _position:absolute; top:360px; right:0; z-index:999999; display:block;}
+    #right_ul{ position:relative;}
+    #right_qq{  background:url(Public/plugins/helpfixed/images/7_03.png) no-repeat; width:68px; height:74px; }
+    #right_tel{ background:url(Public/plugins/helpfixed/images/7_05.png) no-repeat; width:68px; height:77px; }
+    #right_tip{  background:url(Public/plugins/helpfixed/images/flag_right.png) no-repeat; width:252px; height:91px; position:absolute; right:70px; top:-10px; display:none; z-index:999999; }
+    .flagShow_p1{ float:left; margin-left:15px; _margin-left:5px; font-size:18px; line-height:91px;}
+    .flagShow_p2{ float:left; margin-left:10px; _margin-left:5px; font-size:18px;  color:#FA7C00;}
+    .flagShow_p2 a{ display:block; margin: 20px 0 5px 12px; line-height:0;}
+    .flagShow_p2 span{ margin: 0 0 0 14px; }
+    .flag_qq{ display:none;}
+    #backToTop{ position:fixed; _position:absolute; bottom:20px; right:0; z-index:999999; display:none; }
+    a.backToTop_a{  background:url(Public/plugins/helpfixed/images/7_08.png) no-repeat; width:68px; height:79px; display:block; }
+    a.backToTop_a:active{  background:url(Public/plugins/helpfixed/images/7_11.png) no-repeat; }
+    .line91{ line-height:91px; }
+</style>
+<div id="rightButton">
+    <ul id="right_ul">
+        <li id="right_qq" class="right_ico" show="qq" hide="tel"></li>
+        <li id="right_tel" class="right_ico" show="tel" hide="qq"></li>
+        <li id="right_tip" class="png">
+            <p class="flagShow_p1 flag_tel">电话联系</p>
+            <p class="flagShow_p2 flag_tel line91">18176406629</p>
+            <p class="flagShow_p1 flag_qq">QQ联系</p>
+            <p class="flagShow_p2 flag_qq">
+                <a href="tencent://message/?uin=307242951&Site=QQ交谈&Menu=yes" target="_blank">
+                    <img border="0" src="Public/plugins/helpfixed/images/qiyeQQ.png"></a> <span>QQ:307242951</span> </p>
+        </li>
+    </ul>
+</div>
+<div id="backToTop">
+    <a href="javascript:;" onfocus="this.blur();" class="backToTop_a png"></a>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        $("#rightButton").css("right", "0px");
+
+        var button_toggle = true;
+        $(".right_ico").on("mouseover", function(){
+            var tip_top;
+            var show= $(this).attr('show');
+            var hide= $(this).attr('hide');
+            tip_top = show == 'tel' ?  65 :  -10;
+            button_toggle = false;
+            $("#right_tip").css("top" , tip_top).show().find(".flag_"+show).show();
+            $(".flag_"+hide).hide();
+
+        }).on("mouseout", function(){
+            button_toggle = true;
+            hideRightTip();
+        });
+
+
+        $("#right_tip").on("mouseover", function(){
+            button_toggle = false;
+            $(this).show();
+        }).on("mouseout", function(){
+            button_toggle = true;
+            hideRightTip();
+        });
+
+        function hideRightTip(){
+            setTimeout(function(){
+                if( button_toggle ) $("#right_tip").hide();
+            }, 500);
+        }
+
+        $("#backToTop").click(function(){
+            var _this = $(this);
+            $('body,html').animate({scrollTop:0},1000,'swing',function(){_this.hide()});
+        });
+
+        $(window).scroll(function(){
+            var htmlTop = $(document).scrollTop();
+            if( htmlTop > 0){
+                $("#backToTop").show();
+            }else{
+                $("#backToTop").hide();
+            }
+        });
+    });
+</script>
+<!--[if lte IE 6]>
+<script src="js/phone/PNG.js" type="text/javascript"></script>
+<script>
+    if( typeof(PNG) == 'object') PNG.fix('.png');
+</script>
+<![endif]-->
+
+
+<link rel="stylesheet" href="Public/public/header.css" type="text/css" />
+<div class="header header_change">
+    <a href="/index/index"><div class="logo ring-hover"><img class="oniicon"  src="Uploads/web/2016-03-03/56d79224723a5.png"></div></a>
+    <div class="nav clearfix">
+        <ul class="nav_list">
+            <a class="nav_link" href="/index/index">
+                <li class="nav_item">
+                    首页
+                </li>
+            </a>
+            <a class="nav_link " href="/sale/goods">
+                <li class="nav_item
+                                    ">
+                    二手物品
+                </li>
+            </a>
+            <a class="nav_link" href="/buy/index">
+                <li class="nav_item
+                                    ">
+                    二手求购
+                </li>
+            </a>
+            <a  target="_blank" class="nav_link" href="/other/appdown">
+                <li class="nav_item">
+                    APP下载
+                </li>
+            </a>
+        </ul>
+    </div>
+    <div class="button-group dropdown">
+        <button type="button" class="button dropdown-toggle"> 柚子 <span class="downward"></span></button>
+        <ul class="drop-menu headdropdown">
+            <li><a  href="/other/joinus">加入我们</a></li>
+            <li><a  href="/other/applyschool">开通学校</a></li>
+            <li><a  href="/other/contact">联系我们</a></li>
+            <!-- <li><a  href="/other/mknow">正在开发</a></li> -->
+        </ul>
+    </div>
+    <div class="logreg">
+        <p class="right">
+        <p class="loginin">
+            <a  class="tips headpic" data-toggle="hover" data-place="bottom" title="点击更换头像" target="_blank"  href="/user/mkhead">
+                <img src="Uploads/heads/default6.png" >
+            </a>
+            <a class="info badge-corner" href="/user/info">个人中心</a>                    <a class="line">|</a>
+            <a class="logout" href="/logreg/logout">退出</a>
+        </p>
+        </p>
+    </div>
+    <div class="searchbox">
+        <div class="form">
+            <span class="icon-search serach-icon"></span>
+            <input name="keywords" id="serachWord" class="search"  type="serach" placeholder="搜索你想要的商品"/>            <div onclick="toSearch()" class="submit" value="搜索">搜索</div>
+        </div>
+        <!-- <div class="hotword">
+            <span class="hot">热门：</span>
+            <a href="/sale/item/type/2">
+                <span class="word1">手机</span>
+            </a>
+            <a href="/sale/item/type/3">
+                <span class="word1">电脑</span>
+            </a>
+            <a href="/sale/item/type/7">
+                <span class="word1">书籍教材</span>
+            </a>
+        </div> -->
+    </div>
+</div>
+
+
+
+<link rel="stylesheet" type="text/css" href="Public/Home/css/release/buy.css">
+<div class="wrap">
+    <div class="info clearfix">
+        <div class="topicon">
+            <div class="icon"></div>
+            <div class="title">发布求购</div>
+        </div>
+        <div class="list">
+            <form method="post" class="form-tips form-x" action="/home/release/dobuy" enctype="multipart/form-data">
+                <div class="form-group">
+                    <div class="label">
+                        <label for="title">
+                            二货标题</label>
+                    </div>
+                    <div class="field">
+                        <input class="input" id="title" size="60%" name="title" size="30" placeholder="请输入二货标题" type="text"
+                               data-validate="required:标题不能为空！">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label for="detail">
+                            二货详情</label>
+                    </div>
+                    <div class="field">
+                        <textarea rows="5" id="detail" name="detail" class="input" placeholder="建议填写物品用途、新旧程度、原价等信息"
+                                  data-validate="required:详情不能为空！"></textarea>                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label for="address">
+                            交易地点</label>
+                    </div>
+                    <div class="field">
+                        <input class="input" id="address" name="address" size="30" placeholder="宿舍、教学楼、食堂等" type="text"
+                               data-validate="required:交易地点不能为空！">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label for="money">
+                            二货金额</label>
+                    </div>
+                    <div class="field">
+                        <div class="input-group">
+                            <span class="addon icon-yen"></span>
+                            <input class="input" id="money" name="price" size="50" placeholder="例如200" type="text"
+                                   data-validate="required:金额不能为空！,plusinteger:金额只能为整数！" ><span class="addon">元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label for="school">
+                            学校</label>
+                    </div>
+                    <div class="field">
+                        <select class="input" name="school" id="school"  data-validate="required:分类不能为空！">
+                            <option value="">点击展开学校列表</option>
+                            <option value="1">桂林电子科技大学</option><option value="2">广西师范大学</option><option value="3">桂林理工大学</option><option value="4">桂林航天工业学院</option><option value="5">桂林理工大学博文管理学院</option><option value="6">广西师范大学漓江学院</option><option value="7">桂林医学院</option><option value="8">桂林旅游学院</option><option value="9">桂林师范高等专科学校</option><option value="10">江西中医药大学</option><option value="13">江西中医药大学科技学院</option><option value="14">南昌大学</option><option value="15">东华理工大学</option><option value="20">桂林电子科技大学信息科技学院</option><option value="29">广西理工职业技术学院</option><option value="36">陕西工业职业技术学院</option><option value="37">华东交通大学</option><option value="43">江西理工大学(南昌校区)</option><option value="52">青岛港湾职业技术学院</option><option value="54">华侨大学</option><option value="57">江西财经大学(蛟桥校区)</option><option value="73">四川传媒学院</option><option value="76">福建农林大学东方学院</option><option value="79">四川交通职业技术学院</option><option value="93">天津理工大学</option><option value="100">江西工程学院</option><option value="102">北京协和医学院</option><option value="105">宣城职业技术学院</option><option value="120">青海民族大学</option><option value="128">南华大学</option><option value="139">甘肃民族师范学院</option>                     </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label for="item">
+                            选择分类</label>
+                    </div>
+                    <div class="field">
+                        <select class="input" name="type" id="item"  data-validate="required:分类不能为空！">
+                            <option value="">点击展开分类列表</option>
+                            <option value="1">代步工具</option>
+                            <option value="2">手机</option>
+                            <option value="3">电脑</option>
+                            <option value="4">数码</option>
+                            <option value="5">电器</option>
+                            <option value="6">衣鞋帽伞</option>
+                            <option value="7">书籍教材</option>
+                            <option value="8">体育健身</option>
+                            <option value="9">乐器</option>
+                            <option value="10">自行设计</option>
+                            <option value="11">其他</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label for="tel">
+                            你的手机</label>
+                    </div>
+                    <div class="field">
+                        <input class="input" id="tel" name="tel" size="30" placeholder="QQ或手机至少填一项" type="text" value=""  data-validate="mobile:手机号码不正确！">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="label">
+                        <label for="qq">
+                            你的QQ</label>
+                    </div>
+                    <div class="field">
+                        <input class="input" value="1913045515" id="qq" name="qq" size="30" placeholder="QQ或手机至少填一项" type="text">
+                    </div>
+                </div>
+                <div class="form-button">
+                    <button class="fabu" type="submit">
+                        确 认 发 布</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="Public/public/footer.css" type="text/css" />
+<div class="footer">
+    <div class="footerNav">
+        <ul class="fn">
+            <li><span class="fnIco"></span><a href="/other/contact">关于我们</a></li>
+            <li><span class="fnIco"></span><a href="/other/joinus">加入我们</a></li>
+            <li><span class="fnIco"></span><a href="/sale/goods">校内二手</a></li>
+            <li><span class="fnIco"></span><a href="/buy/index">校内求购</a></li>
+            <!-- <li><span class="fnIco"></span><a href="/shop/index">柚子商城</a></li> -->
+            <li><span class="fnIco"></span><a href="/logreg/login">我要登录</a></li>
+            <li><span class="fnIco"></span><a href="/logreg/register">我要注册</a></li>
+        </ul>
+    </div>
+    <div class="footerMain">
+        <a href="/index/index" class="fLogo" style="background: url(Uploads/web/2016-03-03/56d792288071d.png);">柚子校园-专注校园二手</a>
+        <div class="fContact">
+            <h3 class="fct">联系我们 / <span>contact us</span></h3>
+            <p>Q群：433981852</p>
+            <p>Q Q：307242951</p>
+            <p>地址：广西桂林电子科技大学东区</p>
+        </div>
+        <div class="fEwm">
+            <img width="106" height="106" alt="微信公众号" src="Uploads/web/2016-03-03/56d792395ebe9.png">
+            <p>关注微信公众平台</p>
+        </div>
+        <div class="fCall">
+            <p class="callN">TEL:18176406629</p>
+            <span class="kfT">24小时在线客服</span>
+            <a class="fxl" href="http://weibo.com/u/276233227/" target="_blank">新浪微博</a>
+            <a class="fqq" href="tencent://message/?uin=307242951&amp;Site=QQ交谈&amp;Menu=yes" target="_blank">客服QQ</a>
+            <a class="fwx tips" data-toggle="hover" data-place="top" data-image="Uploads/web/2016-03-03/56d792395ebe9.png">微信二维码</a>
+        </div>
+    </div>
+    <p class="copyright">版权所有 © All Rights Reserved，桂ICP备15000254号-1</p>
+</div>
+</body>
+</html>

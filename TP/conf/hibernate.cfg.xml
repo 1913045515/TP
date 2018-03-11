@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- 配置Hibernate的基本属性 -->
+		<!-- 1. 数据源配置到 IOC 容器中, 在这里不需再配置 -->
+		<!-- 2. 关联的 .hbm.xml 也在 IOC 容器 配置 SessionFactory 实例时 进行配置 -->
+		<!-- 3. 配置 Hibernate 的基本属性: 方言, SQL 显示及格式化, 生成数据表的策略以及 二级缓存 -->
+		<property name="dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">false</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.temp.use_jdbc_metadata_defaults">
+			false
+		</property>
+		<!-- 配置 Hibernate 二级缓存相关属性 -->
+		<mapping resource="com/tp/entity/Classification.hbm.xml" />
+		<mapping resource="com/tp/entity/Commoditypath.hbm.xml" />
+		<mapping resource="com/tp/entity/Commodity.hbm.xml" />
+		<mapping resource="com/tp/entity/Usersamount.hbm.xml" />
+		<mapping resource="com/tp/entity/Jurisdiction.hbm.xml" />
+		<mapping resource="com/tp/entity/Change.hbm.xml" />
+		<mapping resource="com/tp/entity/Deliver.hbm.xml" />
+		<mapping resource="com/tp/entity/Platform.hbm.xml" />
+		<mapping resource="com/tp/entity/Users.hbm.xml" />
+		<mapping resource="com/tp/entity/Campus.hbm.xml" />
+		<mapping resource="com/tp/entity/Tradinghistory.hbm.xml" />
+		<mapping resource="com/tp/entity/Promotion.hbm.xml" />
+		<mapping resource="com/tp/entity/Report.hbm.xml" />
+		<mapping resource="com/tp/entity/Comment.hbm.xml" />
+		<mapping resource="com/tp/entity/Punishment.hbm.xml" />
+		<mapping resource="com/tp/entity/Order.hbm.xml" />
+		<mapping resource="com/tp/entity/Promotioncommodity.hbm.xml" />
+	</session-factory>
+
+</hibernate-configuration>

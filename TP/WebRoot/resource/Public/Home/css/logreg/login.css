@@ -1,0 +1,255 @@
+html,body{
+    height:100%;
+    overflow:hidden;
+}
+
+body .main{
+    background: url("../../../images/bigimage/reg_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+
+.right{
+    float: left;
+    display: inline-block;
+    margin-left: 10%;
+    margin-top: 12%;
+    text-align: center;
+    color: #333;
+}
+
+.right .sao p{
+    margin-bottom: 0px;
+}
+
+.right .sao .big{
+    font-size: 30px;
+    margin: 12px auto;
+}
+
+.right .erweima img{
+    height: 150px;
+}
+
+.right .erweima .text{
+    width: 200px;
+    color: #fff;
+    height: 24px;
+    border-radius: 12px;
+    background-color: rgb(3,10,16);
+    margin: 15px auto;
+}
+
+.right .copyright{
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.right .sao .small{
+    font-size: 16px;
+    margin: 12px auto;
+}
+
+.right .weixinpic img{
+    width: 200px;
+    height: 150px;
+}
+
+.main .left{
+    width: 410px;
+    background-color: #fff;
+    float: right;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    opacity: 0.8;
+    margin-top: 12%;
+    margin-right: 10%;
+    -moz-box-shadow: 0px 1px 5px #AD4FFF;
+    -webkit-box-shadow: 0px 1px 5px #AD4FFF;
+    box-shadow: 0px 1px 5px #AD4FFF;
+}
+
+.main .left form{
+    margin: 20px 0 0 20px;
+}
+
+.main .left .top{
+    height: 80px;
+    font-size: 40px;
+    border-radius: 7px 7px 0 0;
+    text-align: center;
+    line-height: 80px;
+    background-color: #888;
+    color: #fff;
+}
+
+.main .left .item{
+    margin-top: 9px;
+}
+
+.main .left .item label{
+    float: left;
+    width: 90px;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+}
+
+.main .left .item input{
+    display: inline-block;
+}
+
+.main .left .form-group{
+    width: 350px;
+}
+
+.main .left input{
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    display: block;
+    font-size: 14px;
+    height: 40px;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 260px;
+    color: #000;
+}
+
+.main input:focus {
+    border: 1px solid rgb(0,170,136);
+}
+
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #999;
+}
+
+.field .input-help{
+    display: inline-block;
+}
+
+.input-help ul{
+    padding-left: 5px;
+}
+
+.input-help ul li{
+    display: inline-block;
+}
+
+.main .left .reg{
+    margin-left: 90px;
+}
+
+.main .left .reg .reg_btn{
+    width: 260px;
+    height: 40px;
+    margin-top: 9px;
+    background-color: rgb(0,170,136);
+    border: none;
+    line-height: 40px;
+    font-size: 22px;
+    color: #fff;
+    border-radius: 7px;
+}
+
+.main .left .verify{
+    position: relative;
+}
+
+.main .left .verify #verifycode{
+    position: absolute;
+    top: 1px;
+    height: 37px;
+    right: 1px;
+    border-radius: 0 7px 7px 0;
+}
+
+
+.mt30, .mt-30 {
+    margin-top: 30px!important;
+}
+
+
+.mt5, .mt-5 {
+    margin-top: 5px!important;
+}
+
+.pull-left {
+    float: left!important;
+}
+
+.text-muted {
+    color: #777;
+}
+
+.pull-left {
+    float: left;
+}
+
+p {
+    margin: 0 0 10.5px;
+}
+
+.widget-login a {
+    text-decoration: none;
+}
+
+a, a:active, a:focus, a:hover {
+    outline: 0;
+}
+
+a {
+    color: #009a61;
+    text-decoration: none;
+}
+
+a {
+    background: transparent;
+}
+
+[class*=icon-sn-] {
+    display: inline-block;
+    background-image: url(Public/images/icon/icon-sn.svg);
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    background-size: auto 56px;
+}
+
+.icon-sn-weibo {
+    background-position: -56px -28px;
+}
+
+.icon-sn-qq {
+    background-position: -84px -28px;
+}
+
+.icon-sn-weixin {
+    background-position: -252px -28px;
+}
+
+.main .left .other{
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+.main .left .other.auth {
+    margin-top: 0px;
+}
+
+.main .left .other a{
+    text-decoration: none;
+    color: blue;
+    margin-right: 25px;
+}
+
+.longlogin{
+    display: inline-block!important;
+    width: auto!important;
+    height: auto!important;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	
+	<package name="spring-struts" namespace="/" extends="struts-default"> 
+		<!-- 定义权限控制拦截器 -->
+		<interceptors>
+			<interceptor name="authority" class="AuthInterceptor"/>
+		    </interceptors>
+		<!-- 定义全局处理结果 -->
+		<global-results>
+			<!-- 逻辑名为login的结果，映射到/login.jsp页面 -->
+			<result name="login">/login.jsp</result>
+		</global-results>
+         <action name="luceneAction" class="LuceneAction">	
+			<!-- 使用拦截器 -->
+			<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="authority" />
+         </action>
+         <action name="codePic" class="CodeUtil"></action>
+         <action name="usersAction" class="UsersAction">
+         	<result name="detail">usersDetail.jsp</result>
+         	<result name="login" type="redirect">login.jsp</result>
+         </action>
+         <action name="commodityAction" class="CommodityAction">
+        	<result name="detail">detail.jsp</result>
+         </action>
+         
+          <action name="classificationAction" class="ClassificationAction">
+        	<result name="detail">typeDetail.jsp</result>
+         </action>
+         
+          <action name="reportAction" class="ReportAction"></action>
+          <action name="campusAction" class="CampusAction">
+          	 <result name="detail">campusDetail.jsp</result>
+          </action>
+          
+           <action name="orderAction" class="OrderAction">
+          	 <result name="detail">orderDetail.jsp</result>
+          </action>
+          
+          <action name="platformAction" class="PlatformAction">
+          	 <result name="detail">platformDetail.jsp</result>
+          </action>
+          <action name="statisticsAction" class="StatisticsAction"></action>
+          <action name="emailAction" class="EmailAction">
+          	<result name="reply">emailReply.jsp</result>
+          </action>
+           <action name="jPushAction" class="JPushAction"></action>
+            <action name="commodityUploadAction" class="CommodityUploadAction"></action>
+           
+	</package>
+</struts>

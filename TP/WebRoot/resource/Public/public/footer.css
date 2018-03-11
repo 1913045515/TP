@@ -1,0 +1,28 @@
+/*ç½‘é¡µåº•éƒ¨*/
+.footer{ width:100%; overflow:hidden; background-color:#282c36;}
+.footerNav{ width:100%; height:40px; background-color:#888;}
+.fn{ width:750px; margin:0 auto; overflow:hidden;}
+.fn li{ float:left; line-height:40px; height:40px; padding-right:35px;}
+.fnIco{ display:block; width:5px; height:5px; margin:17px 10px 0 0; float:left; border:#ffffff solid 2px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;}
+.fn li a{ color:#ffffff; font-size:14px;}
+
+.footerMain{ width:1000px; margin:0 auto; overflow:hidden; padding:30px 0;}
+.fLogo{ display:block; width:200px; height:80px; margin:25px 40px 0 0; text-indent:-999px; overflow:hidden; background-size: 100% 100%; background:url("../images/icon/logo1.png") no-repeat ; float:left;}
+.fContact{ float:left; padding:0 15px; border-left:#30343f solid 1px; width:280px;}
+.fct{ color:#999999; padding-bottom:10px;}
+.fct span{ font-size:14px; font-weight:normal;}
+.fContact p{ font-size:14px; margin-top:7px; color:#999999; line-height:25px;}
+
+.fEwm{ float:left; width:200px; text-align:center; padding:10px 40px 0; border-left:#30343f solid 1px; border-right:#30343f solid 1px;}
+.fEwm p{ color:#999999; font-size:14px; padding-top:5px;}
+
+.fCall{ float:right; width:200px;}
+.callN{ color:#999999; font-size:22px; font-weight:bold; white-space:nowrap; overflow:hidden;}
+.callT{ color:#666666; font-size:14px; padding-top:5px; white-space:nowrap; overflow:hidden;}
+.kfT{ display:block; width:190px; font-size:14px; margin:10px 0; background-color:#cc424b; color:#ffffff; text-align:center; line-height:35px; height:35px;}
+.fxl, .fqq, .fwx{ display:block; width:50px; height:50px; overflow:hidden; text-indent:-100px; float:left;}
+.fxl{ background:url("../images/icon/sprite.png") no-repeat 0 0;}
+.fqq{ background:url("../images/icon/sprite.png") no-repeat -58px 0; margin-left:20px;}
+.fwx{ background:url("../images/icon/sprite.png") no-repeat -115px 0; margin-left:20px;}
+
+.copyright{ width:100%; height:50px; line-height:50px; text-align:center; color:#999999; font-size:14px; background-color:#22252e;}

@@ -1,0 +1,99 @@
+.sidebar{
+    box-sizing: border-box;
+    padding: 10px;
+    width:140px;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    margin-right: 10px;
+}
+
+.sidebar .btn .ershou,
+.sidebar .btn .qiugou{
+    background: #678BA3 none repeat scroll 0 0;
+    border-radius: 4px;
+    height: 60px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.sidebar .btn .ershou:hover,
+.sidebar .btn .qiugou:hover{
+    box-shadow: 1px 5px 1px 1px rgba(0, 0, 0, 0.16);
+}
+
+.sidebar .btn .ershou a,
+.sidebar .btn .qiugou a{
+    color: #fff;
+    display: block;
+    font-size: 22px;
+    line-height: 60px;
+}
+
+
+.sidebar .helped{
+    background: rgba(0, 0, 0, 0) url("../../../images/icon/help.png") no-repeat scroll 0 0;
+    color: rgb(58,58,58);
+    font-size: 26px;
+    height: 155px;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 73px;
+}
+
+.sidebar .helped span{
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+.sidebar .contact{
+    text-align: center;
+    color: rgb(58,58,58);
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+.sidebar .erweima{
+    margin-top: 10px;
+    padding: 1px;
+}
+
+.sidebar .erweima .wx {
+    background-image: url("../../../images/icon/wx.png");
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+
+}
+.sidebar .erweima .wb {
+    background-image: url("../../../images/icon/wb.png");
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+
+.sidebar .adphone{
+    background: url("../../../images/icon/phone.png") no-repeat center;
+    background-size: 114px 220px;
+    margin-right: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: inline-block;
+    height: 220px;
+    width: 114px;
+}
+
+.sidebar .adphone img{
+    height: 220px;
+    width: 114px;
+}

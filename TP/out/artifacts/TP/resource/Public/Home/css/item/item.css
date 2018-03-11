@@ -1,0 +1,201 @@
+.item{
+    position: absolute;
+    left: 0px;
+    top: 60px;
+    font-family: "Microsoft YaHei", "simsun", "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+}
+
+.item ul li{
+    border-bottom: 1px solid rgb(224,235,231);
+}
+
+.item .school{
+    width: 140px;
+    height: auto!important;
+    background-color: #fff;
+    font-size: 16px;
+    padding: 1px;
+}
+
+.item .school a{
+    text-decoration: underline;
+    color: #fff;
+}
+
+.item .school .college{
+    text-align: center;
+    padding: 5px 0;
+}
+
+.item .school .xuexiao{
+    display: inline-block;
+    padding: 3px 0;
+    color: rgb(58,58,58);
+}
+
+.item .school .change{
+    text-align: center;
+    padding: 3px 0 8px 0;
+    width: 140px;
+    display: inline-block;
+}
+
+.item .school .change .switch{
+    color: rgb(58,58,58);
+}
+
+.item .school .icon{
+    display: block;
+    width: 35px;
+    margin: auto;
+    margin-top: 14px;
+    margin-bottom: 7px;
+    height: 40px;
+    font-size: 33px;
+}
+
+.item ul{
+    padding-left: 2px;
+}
+
+.item ul li{
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
+    list-style: none;
+    width: 140px;
+    height: 55px;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(224, 235, 231);
+    transition: box-shadow 3s;
+    position: relative;
+}
+
+.item ul li:hover{
+    box-shadow: 0 0 7px rgba(0,0,0,0.5) inset;
+}
+
+.item ul li .icon{
+    display: inline-block;
+    margin-left: 15px;
+    line-height: 54px;
+}
+
+.item ul li .text{
+    display: inline-block;
+    font-size: 15px;
+    color: rgb(58,58,58);
+    cursor: pointer;
+    margin-left: 12px;
+    height: 54px;
+    line-height: 54px;
+    transition: color 0.7s;
+    position: absolute;
+    top: 0;
+}
+
+
+
+/*
+.item .daibu{
+    background: url('../../images/item/1_1.gif') no-repeat;
+}
+
+.item .daibu:hover{
+    background: url('../../images/item/1.gif') no-repeat;
+}
+
+.item .shouji{
+    background: url('../../images/item/2_1.gif') no-repeat;
+}
+
+.item .shouji:hover{
+    background: url('../../images/item/2.gif') no-repeat;
+}
+
+.item .diannao{
+    background: url('../../images/item/3_1.gif') no-repeat;
+}
+
+.item .diannao:hover{
+    background: url('../../images/item/3.gif') no-repeat;
+}
+
+.item .shuma{
+    background: url('../../images/item/4_1.gif') no-repeat;
+}
+
+.item .shuma:hover{
+    background: url('../../images/item/4.gif') no-repeat;
+}
+
+.item .peijian{
+    background: url('../../images/item/5_1.gif') no-repeat;
+}
+
+.item .peijian:hover{
+    background: url('../../images/item/5.gif') no-repeat;
+}
+
+.item .shuji{
+    background: url('../../images/item/6_1.gif') no-repeat;
+}
+
+.item .shuji:hover{
+    background: url('../../images/item/6.gif') no-repeat;
+}
+
+.item .dianqi{
+    background: url('../../images/item/7_1.gif') no-repeat;
+}
+
+.item .dianqi:hover{
+    background: url('../../images/item/7.gif') no-repeat;
+}
+
+.item .tiyu{
+    background: url('../../images/item/8_1.gif') no-repeat;
+}
+
+.item .tiyu:hover{
+    background: url('../../images/item/8.gif') no-repeat;
+}
+
+.item .shenghuo{
+    background: url('../../images/item/9_1.gif') no-repeat;
+}
+
+.item .shenghuo:hover{
+    background: url('../../images/item/9.gif') no-repeat;
+}
+
+.item .zixing{
+     background: url('../../images/item/10_1.gif') no-repeat;
+ }
+
+.item .zixing:hover{
+    background: url('../../images/item/10.gif') no-repeat;
+}
+
+.item .yueqi{
+    background: url('../../images/item/11_1.gif') no-repeat;
+}
+
+.item .yueqi:hover{
+    background: url('../../images/item/11.gif') no-repeat;
+}
+
+.item .xuni{
+    background: url('../../images/item/12_1.gif') no-repeat;
+}
+
+.item .xuni:hover{
+    background: url('../../images/item/12.gif') no-repeat;
+}
+
+.item .qita{
+    background: url('../../images/item/13_1.gif') no-repeat;
+}
+
+.item .qita:hover{
+    background: url('../../images/item/13.gif') no-repeat;
+}*/

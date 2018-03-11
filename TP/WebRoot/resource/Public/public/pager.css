@@ -1,0 +1,42 @@
+/*Ò³ï¿½ÅµÄ·ï¿½Ò³ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ê½ï¿½ï¿½Ê¼*/
+
+
+ .pager {
+    color: rgb(58,58,58);
+    padding: 16px;
+    margin: 17px auto 20px;
+}
+
+ .pager a,
+ .pager .current{
+    text-align: center;
+    white-space: nowrap;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 16px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    color: #555;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #fff;
+    margin: 5px 7px;
+    box-shadow: 0px 0px 2px 1px #CCCCCC;
+}
+
+ .pager .current{
+    background-color: rgb(0,170,136);
+    color: #fff;
+    border: none;
+}
+
+ .pager .rows{
+    color: rgb(58,58,58);
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/*Ò³ï¿½ÅµÄ·ï¿½Ò³ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½*/
