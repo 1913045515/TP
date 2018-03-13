@@ -96,7 +96,8 @@
       }  
       if(matchResult==true){
       	  $.post("/TP/usersAction?method=login", {usersName:userName,password:pwd, validcode:validcode},function(data,status){
-      	 	 var error=data.error;
+      	 	console.log('data',data)
+      	 	  var error=data.error;
       	 	 var result=data.result;  
       	 	 getPic();
   	     if(error=="error"){

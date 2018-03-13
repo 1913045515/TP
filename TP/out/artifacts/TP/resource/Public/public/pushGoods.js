@@ -68,7 +68,6 @@ function postGoods(goods){
 				}else{
 					alert("上传失败，请重新上传");
 				}
-				
 			});
 		}
 	}

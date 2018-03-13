@@ -12,6 +12,7 @@ public class Goods {
 	private String item;
 	private String urlInfo;
 	private String urlPic;
+
 	public String getName() {
 		return name;
 	}

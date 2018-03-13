@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import com.google.gson.GsonBuilder;
 import javassist.bytecode.stackmap.TypeData.ClassName;
 
 import org.apache.lucene.analysis.core.TypeTokenFilter;
@@ -16,12 +17,11 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 public class JsonUtil {
 	private static Gson gson;
-	public static String toJson(Object objec) {
-		gson = new Gson();
-		String strJson="";
-		if(objec!=null && !"".equals(objec)){
-			gson.toJson(objec);
-		}
+	public static String toJson(Object object) {
+		GsonBuilder builder = new GsonBuilder();
+		builder.excludeFieldsWithoutExposeAnnotation();
+		Gson gson = builder.create();
+		String strJson = gson.toJson(object);
 		return strJson;
 	}
 	public static Map<String, Object> toObject(String jsonString)

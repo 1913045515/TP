@@ -9,6 +9,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.tp.biz.CommentBiz;
 import org.apache.struts2.ServletActionContext;
 
 import com.google.gson.Gson;
@@ -20,6 +21,7 @@ import com.tp.tools.JsonUtil;
 import com.tp.vo.Goods;
 public class CommodityAction {
 	private CommodityBiz commodityBiz;
+	private CommentBiz commentBiz;
 	private HttpServletRequest request;
 	private HttpServletResponse response;
 	private LuceneBiz luceneBiz;
@@ -29,6 +31,11 @@ public class CommodityAction {
 	public void setCommodityBiz(CommodityBiz commodityBiz) {
 		this.commodityBiz = commodityBiz;
 	}
+
+	public void setCommentBiz(CommentBiz commentBiz) {
+		this.commentBiz = commentBiz;
+	}
+
 	public CommodityAction(){
 		try {
 			response = ServletActionContext.getResponse();
@@ -112,9 +119,10 @@ public class CommodityAction {
 			String goodsID=request.getParameter("goodsID");
 			result=commodityBiz.queryCommodity(Integer.valueOf(goodsID));
 			if(result==null){
-				result=new ArrayList<Map<String, Object>>();
+				witer.write("");
+			}else{
+				witer.write(JsonUtil.toJson(result));
 			}
-			witer.write(JsonUtil.toJson(result));
 		}else if("detail".equals(type)){
 			String showId=request.getParameter("showId");
 			result=commodityBiz.queryCommodity(Integer.valueOf(showId));
@@ -127,7 +135,13 @@ public class CommodityAction {
 		     Goods goods = gson.fromJson(json, Goods.class); 
 		     int flag=commodityBiz.postCommodity(goods,(Users)request.getSession().getAttribute("indexUsers"));
 		     witer.write(flag==1?"true":"false");
-		}	
+		}else if("postGoodsCommon".equals(type)){
+			String goodsID=request.getParameter("goodsID");
+			String userID=request.getParameter("userID");
+			String content=request.getParameter("content");
+			System.out.println(goodsID+" "+userID+" "+content);
+			witer.write(commentBiz.saveComment(goodsID,userID,content)+"");
+		}
 		witer.flush();
 		witer.close();	
 		return null;

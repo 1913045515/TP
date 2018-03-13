@@ -1,8 +1,9 @@
 var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 
 var schoolID="";
+var goodsID="";
 $(function() {
-	var goodsID=getQueryString("goodsID");
+	goodsID=getQueryString("goodsID");
 	ajaxGoodsFunc(goodsID);
 	getUserInfo();
 	if(getQueryString("schoolID")==null  || getQueryString("schoolID")==undefined  || getQueryString("schoolID")==""){
@@ -29,7 +30,6 @@ function ajaxGoodsFunc(goodsID){
 	$.getJSON("/TP/commodityAction?type=goodsdetail&goodsID="+goodsID,
 	function(result) {
 		$.each(result,function(i, field) {
-			console.info(field);
 			$("#goodsName").html("</span>"+field.name+"</span>");
 			$("#goodsPrice").html("</span><span class=\"howmuch\">售价"+field.price+"元</span>"
                        + "&nbsp;&nbsp;&nbsp;<span class=\"daofou\">原价"+field.originalPrice+"元</span>");
@@ -60,7 +60,10 @@ function ajaxGoodsFunc(goodsID){
 				});
 			});	
 			$("#timeName").html("<span class=\"\"><span class=\"iconfont\">&#xe63a;</span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=\"text\">"+FormatDate(field.editTime)+"</span>");
-			$("#user_cmt").html("<h3>"+field.describe+"</h3></br><h4>（记得说是在BBW上面看到的哦）</h4>");
+			$("#user_cmt").html("<h3>"+field.describe+"</h3></br><h4>（记得说是在BBW上面看到的哦）</h4></br>");
+			$.each(field.commentList,function(i, field) {
+				$("#user_cmt").html($("#user_cmt").html()+"<span>用户："+field.userId+"<span/>&nbsp;&nbsp;发表时间：<span>"+field.time+"</span><p>内容："+field.content+"</p></br>");
+			})
 		});
 	});
 }
@@ -251,3 +254,20 @@ function utf16to8(str) {
 	return out;
 }
 
+$(document).on("click",'#commonbtn',function(){
+	if(userID==""){
+		event.preventDefault();
+		alert("登录完才可以评估商品");
+	}else{
+		var content=$("#commoncontent").val();
+		$.post("commodityAction?type=postGoodsCommon", {goodsID:goodsID,userID:userID,content:content},
+			function(data){
+				if(data=="true"){
+					alert("评论失败");
+				}else{
+					alert("评论成功");
+				}
+				window.location.href="/TP/resource/indexGoodsDetail.html";
+			});
+	}
+});

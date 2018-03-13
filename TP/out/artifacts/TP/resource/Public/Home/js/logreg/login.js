@@ -17,7 +17,6 @@
       
       if(matchResult==true){
       	  $.post("/TP/usersAction?method=loginUser", {usersName:userName,password:pwd, validcode:validcode},function(data,status){
-      	 	 console.log(data);
               var error=data.error;
   	     if(error=="error"){
   	         flagShow="验证码错误，请重新输入！";

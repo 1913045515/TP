@@ -75,10 +75,13 @@ public class UsersAction {
 			System.out.println("rand="+rand+"   validcode="+validcode);
 			if(validcode.equals(rand)){
 				login(usersName,password);
+				map.put("error","noError");
 				map.put("result",request.getSession().getAttribute("result"));	
 			}else{
 				map.put("error","error");
-			}	
+				map.put("result","-1");
+			}
+			System.out.println("aaaaaaaaaaaaaaaaa"+JsonUtil.toJson(map));
 			witer.write(JsonUtil.toJson(map));
 		}else if("loginUser".equals(flag)){
 			Map<String,Object>map=new HashMap<String, Object>();
@@ -94,7 +97,7 @@ public class UsersAction {
 			}else{
 				map.put("error","error");
 			}
-			System.out.println(JsonUtil.toJson(map));
+			System.out.println("result:"+JsonUtil.toJson(map));
 			witer.write(JsonUtil.toJson(map));
 		}else if("modify".equals(flag)){
 			int id=Integer.valueOf(request.getParameter("id"));

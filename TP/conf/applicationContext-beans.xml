@@ -68,6 +68,12 @@
         <property name="jurisdictionDao" ref="JurisdictionDaoImp"></property>
     </bean>
 
+    <bean class="com.tp.biz.imp.CommentBizImp" id="CommentBizImp">
+        <property name="usersDao" ref="UsersDaoImp"></property>
+        <property name="commentDao" ref="CommentDaoImp"></property>
+        <property name="commodityDao" ref="CommodityDaoImp"></property>
+    </bean>
+
     <bean class="com.tp.biz.imp.CommodityBizImp" id="CommodityBizImp">
         <property name="commentDao" ref="CommentDaoImp"></property>
         <property name="commodityDao" ref="CommodityDaoImp"></property>
@@ -115,6 +121,7 @@
     <bean class="com.tp.action.CommodityAction" id="CommodityAction" scope="prototype">
         <property name="commodityBiz" ref="CommodityBizImp"></property>
         <property name="luceneBiz" ref="LuceneBizImp"></property>
+        <property name="commentBiz" ref="CommentBizImp"></property>
     </bean>
 
     <bean class="com.tp.action.ClassificationAction" id="ClassificationAction" scope="prototype">
