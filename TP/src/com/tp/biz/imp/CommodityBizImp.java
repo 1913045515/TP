@@ -115,7 +115,7 @@ public class CommodityBizImp implements CommodityBiz {
                 Map<String, Object> commentMap = new HashMap<String, Object>();
                 commentMap.put("content", comment.getContent());
                 commentMap.put("id", comment.getId());
-                commentMap.put("time", FormatTools.FormateTime(comment.getTime()));
+                commentMap.put("time", FormatTools.FormateTime(comment.getTime()==null? (new Date()):comment.getTime()));
                 commentMap.put("userId", comment.getUsersByObjectId().getNickName());
                 commentListresult.add(commentMap);
             }

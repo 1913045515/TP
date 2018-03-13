@@ -262,12 +262,12 @@ $(document).on("click",'#commonbtn',function(){
 		var content=$("#commoncontent").val();
 		$.post("commodityAction?type=postGoodsCommon", {goodsID:goodsID,userID:userID,content:content},
 			function(data){
-				if(data=="true"){
+				if(data==true){
 					alert("评论失败");
 				}else{
 					alert("评论成功");
 				}
-				window.location.href="/TP/resource/indexGoodsDetail.html";
+				window.location.href="/TP/resource/indexGoodsDetail.html?goodsID="+goodsID+"&schoolID="+schoolID;
 			});
 	}
 });

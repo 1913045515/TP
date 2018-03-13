@@ -117,11 +117,15 @@ public class CommodityAction {
 			witer.write(JsonUtil.toJson(null));
 		}else if("goodsdetail".equals(type)){
 			String goodsID=request.getParameter("goodsID");
-			result=commodityBiz.queryCommodity(Integer.valueOf(goodsID));
-			if(result==null){
+			if(goodsID==null || "".equals(goodsID)){
 				witer.write("");
 			}else{
-				witer.write(JsonUtil.toJson(result));
+				result=commodityBiz.queryCommodity(Integer.valueOf(goodsID));
+				if(result==null){
+					witer.write("");
+				}else{
+					witer.write(JsonUtil.toJson(result));
+				}
 			}
 		}else if("detail".equals(type)){
 			String showId=request.getParameter("showId");
