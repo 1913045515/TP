@@ -111,6 +111,9 @@ public class CommodityAction {
 		}else if("goodsdetail".equals(type)){
 			String goodsID=request.getParameter("goodsID");
 			result=commodityBiz.queryCommodity(Integer.valueOf(goodsID));
+			if(result==null){
+				result=new ArrayList<Map<String, Object>>();
+			}
 			witer.write(JsonUtil.toJson(result));
 		}else if("detail".equals(type)){
 			String showId=request.getParameter("showId");

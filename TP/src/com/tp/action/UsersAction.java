@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.tp.jpush.api.StringUtils;
 import org.apache.struts2.ServletActionContext;
 
 import com.tp.biz.CampusBiz;
@@ -88,10 +89,12 @@ public class UsersAction {
 			System.out.println("rand="+rand+"   validcode="+validcode);
 			if(validcode.equals(rand)){
 				loginUsers(usersName,password);
-				map.put("result",request.getSession().getAttribute("result"));	
+				map.put("result",request.getSession().getAttribute("result"));
+				map.put("error","noError");
 			}else{
 				map.put("error","error");
-			}	
+			}
+			System.out.println(JsonUtil.toJson(map));
 			witer.write(JsonUtil.toJson(map));
 		}else if("modify".equals(flag)){
 			int id=Integer.valueOf(request.getParameter("id"));
@@ -121,11 +124,15 @@ public class UsersAction {
 			int id=Integer.valueOf(request.getParameter("id"));
 			request.setAttribute("list",usersBiz.queryUsers(id));
 			return "detail";			
-		}else if("userdetail".equals(flag)){			
-			int userID=Integer.valueOf(request.getParameter("userID"));
-			String json=JsonUtil.toJson(usersBiz.queryUsers(userID));
-			System.out.println("json:"+json);
-			witer.write(json);		
+		}else if("userdetail".equals(flag)){
+			if(request.getParameter("userID")!=null && !"".equals(request.getParameter("userID"))){
+				int userID=Integer.valueOf(request.getParameter("userID"));
+				String json=JsonUtil.toJson(usersBiz.queryUsers(userID));
+				witer.write(json);
+			}else{
+				List<Users> list=new ArrayList<>();
+				witer.write(JsonUtil.toJson(list));
+			}
 		}else if("update".equals(flag)){	
 			int id=Integer.valueOf(request.getParameter("id"));
 			String name=request.getParameter("name");

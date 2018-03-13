@@ -8,22 +8,21 @@ import java.util.Map;
 import java.util.Set;
 
 import com.tp.biz.CommodityBiz;
-import com.tp.dao.CampusDao;
-import com.tp.dao.ClassificationDao;
-import com.tp.dao.CommodityDao;
-import com.tp.dao.CommoditypathDao;
+import com.tp.dao.*;
 import com.tp.dao.imp.CampusDaoImp;
 import com.tp.dao.imp.ClassificationDaoImp;
 import com.tp.dao.imp.CommoditypathDaoImp;
-import com.tp.entity.Campus;
-import com.tp.entity.Classification;
-import com.tp.entity.Commodity;
-import com.tp.entity.Commoditypath;
-import com.tp.entity.Users;
+import com.tp.entity.*;
 import com.tp.vo.Goods;
 public class CommodityBizImp implements CommodityBiz{
 	private CommodityDao commodityDao;
+	private CommentDao commentDao;
 	private CommoditypathDao commoditypathDao;
+
+	public void setCommentDao(CommentDao commentDao) {
+		this.commentDao = commentDao;
+	}
+
 	public void setCommoditypathDao(CommoditypathDao commoditypathDao) {
 		this.commoditypathDao = commoditypathDao;
 	}
@@ -48,10 +47,18 @@ public class CommodityBizImp implements CommodityBiz{
 		return toMap(list);
 	}
 
+	/**
+	 * 获取评论列表
+	 * @param id
+	 * @return
+	 */
 	@Override
 	public List<Map<String, Object>> queryCommodity(int id) {
-		List<Commodity>list=commodityDao.queryCommodity(id);
-		return toMap(list);
+		List<Commodity>commodityList=commodityDao.queryCommodity(id);
+		List<Comment> commentList=commentDao.queryComment(id);
+		List<Map<String, Object>>  list = toMap(commodityList);
+		list.get(0).put("comment",commentList);
+		return list;
 	}
 
 	@Override

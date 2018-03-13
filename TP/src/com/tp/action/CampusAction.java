@@ -22,7 +22,6 @@ public class CampusAction {
 	public void setCampusBiz(CampusBiz campusBiz) {
 		this.campusBiz = campusBiz;
 	}
-	
 	public CampusAction(){
 		try {
 			response = ServletActionContext.getResponse();

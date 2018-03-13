@@ -18,18 +18,15 @@
 <link rel="stylesheet" type="text/css" href="Public/Home/css/sale/zzsc.css">
 <link rel="stylesheet" href="Public/Home/css/sale/goodsdis.css" type="text/css" />
 <link rel="stylesheet" href="Public/Fonts/goodsdis/iconfont.css" type="text/css" />
-
 <script src="Public/public/jquery-1.8.3.min.js"></script>
 <script src="Public/Home/js/sale/goodsdis.js"></script>
 </head>
 <body>
-
 	<!--右侧图标-->
 	<style>
 li {
 	list-style: none
 }
-
 #rightButton {
 	position: fixed;
 	_position: absolute;
@@ -38,23 +35,19 @@ li {
 	z-index: 999999;
 	display: block;
 }
-
 #right_ul {
 	position: relative;
 }
-
 #right_qq {
 	background: url(Public/plugins/helpfixed/images/7_03.png) no-repeat;
 	width: 68px;
 	height: 74px;
 }
-
 #right_tel {
 	background: url(Public/plugins/helpfixed/images/7_05.png) no-repeat;
 	width: 68px;
 	height: 77px;
 }
-
 #right_tip {
 	background: url(Public/plugins/helpfixed/images/flag_right.png)
 		no-repeat;
@@ -66,7 +59,6 @@ li {
 	display: none;
 	z-index: 999999;
 }
-
 .flagShow_p1 {
 	float: left;
 	margin-left: 15px;
@@ -74,7 +66,6 @@ li {
 	font-size: 18px;
 	line-height: 91px;
 }
-
 .flagShow_p2 {
 	float: left;
 	margin-left: 10px;
@@ -82,21 +73,17 @@ li {
 	font-size: 18px;
 	color: #FA7C00;
 }
-
 .flagShow_p2 a {
 	display: block;
 	margin: 20px 0 5px 12px;
 	line-height: 0;
 }
-
 .flagShow_p2 span {
 	margin: 0 0 0 14px;
 }
-
 .flag_qq {
 	display: none;
 }
-
 #backToTop {
 	position: fixed;
 	_position: absolute;
@@ -105,23 +92,19 @@ li {
 	z-index: 999999;
 	display: none;
 }
-
 a.backToTop_a {
 	background: url(Public/plugins/helpfixed/images/7_08.png) no-repeat;
 	width: 68px;
 	height: 79px;
 	display: block;
 }
-
 a.backToTop_a:active {
 	background: url(Public/plugins/helpfixed/images/7_11.png) no-repeat;
 }
-
 .line91 {
 	line-height: 91px;
 }
 </style>
-
 	<div id="rightButton">
 		<ul id="right_ul">
 			<li id="right_qq" class="right_ico" show="qq" hide="tel"></li>
@@ -145,7 +128,6 @@ a.backToTop_a:active {
 		$(document).ready(
 				function(e) {
 					$("#rightButton").css("right", "0px");
-
 					var button_toggle = true;
 					$(".right_ico").on(
 							"mouseover",
@@ -163,7 +145,6 @@ a.backToTop_a:active {
 						button_toggle = true;
 						hideRightTip();
 					});
-
 					$("#right_tip").on("mouseover", function() {
 						button_toggle = false;
 						$(this).show();
@@ -178,7 +159,6 @@ a.backToTop_a:active {
 								$("#right_tip").hide();
 						}, 500);
 					}
-
 					$("#backToTop").click(function() {
 						var _this = $(this);
 						$('body,html').animate({
@@ -187,7 +167,6 @@ a.backToTop_a:active {
 							_this.hide()
 						});
 					});
-
 					$(window).scroll(function() {
 						var htmlTop = $(document).scrollTop();
 						if (htmlTop > 0) {
@@ -204,8 +183,6 @@ a.backToTop_a:active {
     if( typeof(PNG) == 'object') PNG.fix('.png');
 </script>
 <![endif]-->
-
-
 	<link rel="stylesheet" href="Public/public/header.css" type="text/css" />
 	<div class="header header_change">
 		<a href="/TP/resource/indexInfo.html"><div class="logo ring-hover">
@@ -219,21 +196,11 @@ a.backToTop_a:active {
 				<a class="nav_link " href="/TP/resource/indexGoods.html">
 					<li class="nav_item">二手物品</li>
 				</a>
-				<a class="nav_link" href="#" onclick="javascript:alert('作者正在拼命的赶工中。。。')">
-					<li class="nav_item">二手求购</li>
-				</a>
-				<a class="nav_link" href="#"  onclick="javascript:alert('作者正在拼命的赶工中。。。')">
-					<li class="nav_item">APP下载</li>
-				</a>
 			</ul>
 		</div>
 		<div class="button-group dropdown">
-			<button type="button" class="button dropdown-toggle" onclick="javascript:alert('作者正在拼命的赶工中。。。')">
-				BBW <span class="downward"></span>
-			</button>
 			<ul class="drop-menu headdropdown">
 				<li><a href="/TP/resource/indexInfo.html">加入我们</a></li>
-				<li><a href="#"  onclick="javascript:alert('作者正在拼命的赶工中。。。')">开通学校</a></li>
 				<li><a href="/TP/resource/indexInfo.html">联系我们</a></li>
 			</ul>
 		</div>
@@ -261,16 +228,12 @@ a.backToTop_a:active {
 	<nav class="item clearfix">
 		<ul id="schoolId"></ul>
 	</nav>
-
 	<link rel="stylesheet" href="Public/Home/css/public/sidebar.css"
 		type="text/css" />
 	<div class="sidebar">
 		<div class="btn block">
 			<div class="ershou" id="pushGoodsID">
 				<a href="/TP/resource/PushGoods.html">发布二手</a>
-			</div>
-			<div class="qiugou">
-				<a href="#"  onclick="javascript:alert('作者正在拼命的赶工中。。。')">发布求购</a>
 			</div>
 		</div>
 		<div class="helped block">
@@ -292,7 +255,6 @@ a.backToTop_a:active {
 		</div>
 		<div class="adphone"></div>
 	</div>
-
 	<link rel="stylesheet" href="Public/Home/css/sale/goods.css"
 		type="text/css" />
 	<style type="text/css">
@@ -301,22 +263,18 @@ a.backToTop_a:active {
 	padding: 0;
 	list-style: none;
 }
-
 body {
 	background: #fff;
 	font: normal 12px/22px 宋体;
 	width: 100%;
 }
-
 img {
 	border: 0;
 }
-
 a {
 	text-decoration: none;
 	color: #333;
 }
-
 a:hover {
 	color: #1974A1;
 }
@@ -327,18 +285,15 @@ a:hover {
 	height: 300px;
 	background: #000;
 }
-
 .fullSlide .bd {
 	margin: 0 auto;
 	position: relative;
 	z-index: 0;
 	overflow: hidden;
 }
-
 .fullSlide .bd ul {
 	width: 100% !important;
 }
-
 .fullSlide .bd li {
 	background-size: 100% 100% !important;
 	width: 100% !important;
@@ -346,12 +301,10 @@ a:hover {
 	overflow: hidden;
 	text-align: center;
 }
-
 .fullSlide .bd li a {
 	display: block;
 	height: 300px;
 }
-
 .fullSlide .hd {
 	width: 100%;
 	position: absolute;
@@ -361,11 +314,9 @@ a:hover {
 	height: 30px;
 	line-height: 30px;
 }
-
 .fullSlide .hd ul {
 	text-align: center;
 }
-
 .fullSlide .hd ul li {
 	cursor: pointer;
 	display: inline-block;
@@ -380,11 +331,9 @@ a:hover {
 	opacity: 0.5;
 	line-height: 999px;
 }
-
 .fullSlide .hd ul .on {
 	background: #f00;
 }
-
 .fullSlide .prev, .fullSlide .next {
 	display: block;
 	position: absolute;
@@ -409,9 +358,6 @@ a:hover {
 	background-position: -6px -137px;
 }
 </style>
-
-
-
 <nav class="item clearfix">
 					<ul>
 						<li class="school">
@@ -473,9 +419,6 @@ a:hover {
 						</a>
 					</ul>
 				</nav>
-				
-				
-				
 	<input type="hidden" name="order" value="">
 	<input type="hidden" name="keyWord" value="">
 	<input type="hidden" name="type" value="">
@@ -527,8 +470,6 @@ a:hover {
         </div>
         <div style="clear: both"></div>
     </div>
-    
-    
     <!--物品详情-->
     <div class="ershou-desc">
         <span class="yinhao">&#xe64f;</span>
@@ -539,8 +480,6 @@ a:hover {
             <span id="user_cmt"></span>
         </div>
     </div>
-    
-    
      <!--评论功能待开发-->
     <div class="commonbox">
         <div class="commontip">评论</div>
@@ -550,18 +489,11 @@ a:hover {
             <p id="replyUserID"></p>
             <div class="common">
                 <img src="Public/images/icon/pleaselogin.png">
-                <input disabled="true" value="正在开发中。。。。。" type="text" name="common" id="commoncontent">
+                <input value="在此评论" type="text" name="common" id="commoncontent">
                 <button id="commonbtn" class="commonbtn" class="reply">评论</button></div>
         </div>
     </div>
-   
 </div>
-
-
-
-
-
-
 	<link rel="stylesheet" href="Public/public/footer.css" type="text/css" />
 	<div class="footer">
 		<div class="footerNav">

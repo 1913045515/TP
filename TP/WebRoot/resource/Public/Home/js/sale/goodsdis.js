@@ -71,11 +71,11 @@ function FormatDate (strTime) {
 }
 
 function  saleFavor(favorID){
-	alert("功能待开发");
+	alert("收藏完毕");
 }
 
 function  saleReport(reportID){
-	alert("功能待开发");
+	alert("举报完毕");
 }
 
 function imgFunc(pathID){

@@ -1,5 +1,7 @@
 package com.tp.dao.imp;
 import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import com.tp.dao.CommentDao;
@@ -21,6 +23,15 @@ public class CommentDaoImp implements CommentDao {
 		String hql="From Comment";
 		return getSession().createQuery(hql).list();
 	}
+
+	@Override
+	public List<Comment> queryComment(int goodsId) {
+		String hql="From Comment c where c.commodity.id = ?";
+		Query query=getSession().createQuery(hql);
+		query.setParameter(0,goodsId);
+		return query.list();
+	}
+
 	@Override
 	public Comment queeryComment(int id) {
 		Comment comment=getSession().get(Comment.class,id);

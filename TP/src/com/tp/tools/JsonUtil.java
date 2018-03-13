@@ -18,7 +18,10 @@ public class JsonUtil {
 	private static Gson gson;
 	public static String toJson(Object objec) {
 		gson = new Gson();
-		String strJson = gson.toJson(objec);
+		String strJson="";
+		if(objec!=null && !"".equals(objec)){
+			gson.toJson(objec);
+		}
 		return strJson;
 	}
 	public static Map<String, Object> toObject(String jsonString)

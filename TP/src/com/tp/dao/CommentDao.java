@@ -4,6 +4,7 @@ import com.tp.entity.Comment;
 public interface CommentDao {
 	//评论接口
 	List<Comment>queryComment();
+	List<Comment>queryComment(int goodsId);
 	Comment queeryComment(int id);
 	int saveComment(Comment comment);
 	int deleteComment(Comment comment);

@@ -17,14 +17,15 @@
       
       if(matchResult==true){
       	  $.post("/TP/usersAction?method=loginUser", {usersName:userName,password:pwd, validcode:validcode},function(data,status){
-      	 	 var error=data.error;
-      	 	 var result=data.result;  
+      	 	 console.log(data);
+              var error=data.error;
   	     if(error=="error"){
   	         flagShow="验证码错误，请重新输入！";
       	 	 getPic();
   	         $("#flagShow").html(flagShow);
   	     }else{
-  	    	 if(result=="3"){
+             var result=data.result;
+             if(result=="3"){
   	  	     	location.href="indexGoods.html";
   	  	     }	else{
   	  	    	flagShow="登陆失败，请重新登录！";
