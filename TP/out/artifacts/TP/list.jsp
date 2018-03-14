@@ -76,7 +76,22 @@ $(function(){
               $("#datagrid").datagrid("loadData", JSON.parse(data));             
   		});  
    }
-   
+    function addInfo(){
+        var checkedItems = $('#datagrid').datagrid('getChecked');
+        var check = [];
+        $.each(checkedItems, function(index, item){
+            check.push(item.id);
+        });
+        var dg =$("#datagrid");
+        var opts =dg.datagrid("options");
+        var _pageNumber =opts.pageNumber;
+        var _pageSize =opts.pageSize;
+        $.post("/TP/commodityAction?type=push",
+                {check:check.toString()},function(data,status){
+                    alert("上架成功");
+                    SearchTrainee(_pageNumber,_pageSize);
+                });
+    }
     function deleteInfo(){
     	var checkedItems = $('#datagrid').datagrid('getChecked');
 		var check = [];
@@ -89,7 +104,7 @@ $(function(){
          var _pageSize =opts.pageSize;  
 		$.post("/TP/commodityAction?type=delete", 
 		  {check:check.toString()},function(data,status){
-		  	    alert("删除成功");
+		  	    alert("下架成功");
 		  	   SearchTrainee(_pageNumber,_pageSize);
 		 }); 
     }
@@ -101,7 +116,8 @@ $(function(){
     	<div class="columnconn"><span class="columntitle">商品信息列表</span></div>
 		<div class="listcontainer">
             <div id="toolbar">  
-                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteInfo();">商品下架</a> 
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteInfo();">商品下架</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addInfo();">商品上架</a>
                 <div class="searchcon">
                     <input id="ss" class="easyui-searchbox" data-options="searcher:search, prompt:'请输入要搜索的商品信息',menu:'#mm'" 
 					style="width:440px;margin-top:-2px;" />

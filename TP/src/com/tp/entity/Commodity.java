@@ -25,7 +25,7 @@ public class Commodity implements java.io.Serializable {
 	private String describes;
 	private Date editTimes;
 	private Date releaseTimes;
-	private Integer shelfState;
+	private Integer shelfState;// 1是下架 0是上架
 	private Set commoditypaths = new HashSet(0);
 	private Set commoditypaths_1 = new HashSet(0);
 	private Set punishments = new HashSet(0);

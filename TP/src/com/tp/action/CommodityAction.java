@@ -112,10 +112,19 @@ public class CommodityAction {
 		}else if("delete".equals(type)){
 			if(!"".equals(request.getParameter("check"))){
 				String[] check=request.getParameter("check").split(",");
-				commodityBiz.updateCommodity(check);
+				int unShelveState=1;
+				commodityBiz.updateCommodity(check,unShelveState);
 			}		
 			witer.write(JsonUtil.toJson(null));
-		}else if("goodsdetail".equals(type)){
+		}else if("push".equals(type)){
+			if(!"".equals(request.getParameter("check"))){
+				int shelveState=0;
+				String[] check=request.getParameter("check").split(",");
+				commodityBiz.updateCommodity(check,shelveState);
+			}
+			witer.write(JsonUtil.toJson(null));
+		}
+		else if("goodsdetail".equals(type)){
 			String goodsID=request.getParameter("goodsID");
 			if(goodsID==null || "".equals(goodsID)){
 				witer.write("");

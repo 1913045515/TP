@@ -171,16 +171,16 @@ public class CommodityBizImp implements CommodityBiz {
     }
 
     @Override
-    public int updateCommodity(String id) {
+    public int updateCommodity(String id,int state) {
         Commodity commodity = commodityDao.queryCommodity(Integer.valueOf(id)).get(0);
-        commodity.setShelfState(Integer.valueOf(1));
+        commodity.setShelfState(state);
         return commodityDao.updateCommodity(commodity);
     }
 
     @Override
-    public void updateCommodity(String[] ids) {
+    public void updateCommodity(String[] ids,int state) {
         for (int i = 0; i < ids.length; i++) {
-            updateCommodity(ids[i]);
+            updateCommodity(ids[i],state);
         }
     }
 

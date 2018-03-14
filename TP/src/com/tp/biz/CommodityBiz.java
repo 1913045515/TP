@@ -15,7 +15,7 @@ public interface CommodityBiz {
 	public List<Map<String,Object>>queryCommodity(String keyName,String schoolName,String className,int pageNumber,int pageSize);
 	public int queryCommodityAccout(String schoolName,String className);
 	public int queryCommodityAccout(String keyName,String schoolName,String className);
-	int updateCommodity(String id);
+	int updateCommodity(String id,int state);
 	int postCommodity(Goods goods,Users user);
-	void updateCommodity(String[] ids);
+	void updateCommodity(String[] ids,int state);
 }
